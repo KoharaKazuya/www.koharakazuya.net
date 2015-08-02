@@ -1,0 +1,10 @@
+baseurl      = "http://koharakazuya.github.io/"
+theme        = "HugoShelf"
+languageCode = "ja-jp"
+title        = "Kohara's Page"
+
+[Author]
+  name       = "Kohara Kazuya"
+  twitter    = "KoharaKazuya"
+  github     = "KoharaKazuya"
+  mail       = "reflect.results@gmail.com"
