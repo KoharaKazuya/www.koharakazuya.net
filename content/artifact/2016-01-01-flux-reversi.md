@@ -6,4 +6,4 @@ thumbnail = ""
 
 <div id="app"></div>
 
-<script src="/js/flux-reversi.js"></script>
+<script src="/js/flux-reversi/bundle.js"></script>
