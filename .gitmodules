@@ -1,0 +1,3 @@
+[submodule "themes/HugoShelf"]
+	path = themes/HugoShelf
+	url = https://github.com/KoharaKazuya/HugoShelf.git
