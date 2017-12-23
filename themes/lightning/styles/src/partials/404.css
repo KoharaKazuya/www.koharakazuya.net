@@ -1,0 +1,16 @@
+.error-404 {
+  display: block;
+  width: 300px;
+  margin: auto;
+  padding: 6rem 0 8rem;
+  text-align: center;
+  color: #999;
+}
+
+.error-404 a {
+  padding: 1rem;
+  color: #419CC0;
+}
+.error-404 a:hover {
+  color: #4EBBE6;
+}

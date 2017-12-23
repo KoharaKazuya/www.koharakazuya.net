@@ -1,6 +1,20 @@
-# KoharaKazuya Pages
+# Kohara's Blog
 
-[My GitHub Pages](http://koharakazuya.github.io/).
+[My Blog](https://www.koharakazuya.net).
 
-Use [Hugo](http://gohugo.io/) and
-[HugoShelf](https://github.com/KoharaKazuya/HugoShelf) (Hugo theme).
+Use [Hugo](http://gohugo.io/) and my custom theme (lightning).
+
+---
+
+**Build & Deploy**
+
+```console
+$ ./build.sh
+$ ./deploy.sh
+```
+
+**Server**
+
+```console
+$ hugo serve --buildDrafts
+```

@@ -1,0 +1,22 @@
+{
+  "name": "hugo-lightning-theme-scripts",
+  "version": "1.0.0",
+  "author": "KoharaKazuya",
+  "dependencies": {
+    "core-js": "^2.5.3"
+  },
+  "devDependencies": {
+    "fuse-box": "^2.5.0-beta.1",
+    "typescript": "^2.6.2",
+    "uglify-js": "^3.3.2"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node fuse.js build",
+    "watch": "node fuse.js watch"
+  }
+}

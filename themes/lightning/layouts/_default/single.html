@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    {{ partial "header.html" . }}
+
+    <main class="container" id="view-main">
+      <article>
+        <h1>{{ .Title }}</h1>
+        <aside class="meta">{{ .Date.Format "2006/1/2" }}</aside>
+        {{ .Content }}
+      </article>
+    </main>
+
+    <nav id="view-nav">
+      <div class="container nav-links-title">最新記事一覧</div>
+      <ul class="container">
+        {{ range first 5 .Site.RegularPages }}
+        <li>
+          {{ partial "nav-link.html" . }}
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    {{ partial "footer" . }}
+
+    {{ partial "body-injections.html" . }}
+  </body>
+
+</html>

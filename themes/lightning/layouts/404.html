@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+  <meta name="robots" content="noindex" />
+
+  <body>
+
+    {{ partial "header.html" . }}
+
+    <div class="container error-404">
+      <div>(。´･ω･)? 404 Not Found</div>
+      <a href="/">ホームに戻る</a>
+    </div>
+
+    {{ partial "footer" . }}
+
+    {{ partial "body-injections.html" . }}
+  </body>
+
+</html>

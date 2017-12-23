@@ -1,0 +1,71 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+  CertificateArn:
+    Type: String
+    Description: Certificates ARN for CloudFront (at us-east-1)
+  HostedZoneId:
+    Type: AWS::Route53::HostedZone::Id
+    Description: Hosted Zone Id of koharakazuya.net.
+
+Resources:
+
+  S3BucketStaticSite:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: www.koharakazuya.net
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: 404.html
+
+  CloudFront:
+    Type: 'AWS::CloudFront::Distribution'
+    DependsOn:
+      - S3BucketStaticSite
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - www.koharakazuya.net
+        Origins:
+          - Id: s3
+            DomainName: !Sub "www.koharakazuya.net.s3-website-${AWS::Region}.amazonaws.com"
+            CustomOriginConfig:
+              OriginProtocolPolicy: http-only
+        DefaultCacheBehavior:
+          TargetOriginId: s3
+          ForwardedValues:
+            QueryString: true
+          ViewerProtocolPolicy: redirect-to-https
+          Compress: true
+        HttpVersion: http2
+        ViewerCertificate:
+          AcmCertificateArn: !Ref "CertificateArn"
+          SslSupportMethod: sni-only
+        Enabled: true
+
+  S3BucketStaticSitePolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref S3BucketStaticSite
+      PolicyDocument:
+        Statement:
+          - Action: 's3:GetObject'
+            Effect: Allow
+            Resource: !Sub 'arn:aws:s3:::${S3BucketStaticSite}/*'
+            Principal: '*'
+
+  DNSRecord:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      RecordSets:
+        - Name: www.koharakazuya.net.
+          Type: A
+          AliasTarget:
+            DNSName: !GetAtt CloudFront.DomainName
+            HostedZoneId: Z2FDTNDATAQYW2  # CloudFront
+        - Name: www.koharakazuya.net.
+          Type: AAAA
+          AliasTarget:
+            DNSName: !GetAtt CloudFront.DomainName
+            HostedZoneId: Z2FDTNDATAQYW2  # CloudFront

@@ -1,0 +1,9 @@
+  {{ if eq .Kind "404" }}
+  <style>{{ (partial "critical-404.css" .) | safeCSS }}</style>
+  {{ else if .IsPage }}
+  <style>{{ (partial "critical-single.css" .) | safeCSS }}</style>
+  {{ else }}
+  <style>{{ (partial "critical-list.css" .) | safeCSS }}</style>
+  {{ end }}
+
+  <script async src="{{ .Site.BaseURL }}app.js"></script>

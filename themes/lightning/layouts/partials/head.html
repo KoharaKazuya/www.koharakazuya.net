@@ -1,0 +1,21 @@
+<head>
+  {{ with .Site.GoogleAnalytics }}
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>{{ .Title }}</title>
+  <meta name="author" content="{{ .Site.Author.name }}" />
+  {{ with $.Site.Params.Description }}<meta name="description" content="{{ $.Site.Params.Description }}" />{{ end }}
+  {{ partial "user-meta.html" . }}
+
+  {{ partial "head-injections.html" . }}
+</head>

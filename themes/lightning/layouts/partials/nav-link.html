@@ -1,0 +1,9 @@
+<a class="nav-link" href="{{ .Permalink }}">
+  <div class="nav-link-thumbnail" style="background-image: url('{{ .Params.thumbnail }}');"></div>
+  <div class="nav-link-info">
+    <div class="nav-link-title">{{ .Title }}</div>
+    <div class="nav-link-date">{{ .Date.Format "2006/1/2" }}</div>
+    <div class="nav-link-summary">{{ .Summary }}</div>
+    <div class="nav-link-prompt">続きを読む</div>
+  </div>
+</a>

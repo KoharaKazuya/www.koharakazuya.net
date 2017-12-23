@@ -1,0 +1,87 @@
+header {
+  display: block;
+  align-items: center;
+}
+
+.site {
+  display: block;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: #419CC0;  /* https://ironodata.info/rgb.php?color=419CC0 */
+}
+
+.site-title {
+  font: inherit;
+}
+
+.site-description {
+  font-size: 0.4rem;
+}
+
+.author {
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.author-card {
+  display: flex;
+  align-items: center;
+}
+
+.author-icon {
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  margin-right: 1rem;
+
+  background-color: #419CC0;
+  background-image: url('/images/author-icon.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.author-header {
+  display: flex;
+  align-items: center;
+}
+
+.author-name,
+.author-biography {
+  color: #888;
+  font-size: 0.4rem;
+  line-height: 1.5;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.author-sns {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.author-sns-icon {
+  color: #888;
+  text-decoration: none;
+  margin-left: 0.4rem;
+}
+
+@media screen and (min-width: 600px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background: #419CC0;  /* https://ironodata.info/rgb.php?color=419CC0 */
+    margin-bottom: 3rem;
+  }
+
+  .author-name,
+  .author-biography,
+  .author-sns-icon {
+    color: #fff;
+  }
+
+}

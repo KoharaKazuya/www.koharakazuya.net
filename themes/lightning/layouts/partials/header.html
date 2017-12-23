@@ -1,0 +1,26 @@
+<header>
+
+  <a class="site" href="/">
+    <h1 class="site-title">{{ .Site.Title }}</h1>
+    {{ with $.Site.Params.Description }}<div class="site-description">{{ $.Site.Params.Description }}</div>{{ end }}
+  </a>
+
+  <div class="author">
+    <div class="author-card">
+      <div class="author-icon"></div>
+      <div>
+        <div class="author-header">
+          <div class="author-name">{{ .Site.Author.name }}</div>
+          <div class="author-sns">
+            {{ with .Site.Author.mail }}<a class="author-sns-icon icon-envelope-o" href="mailto:{{ . }}" target="_blank" rel="noopener"></a>{{ end }}
+            {{ with .Site.Author.twitter }}<a class="author-sns-icon icon-twitter" href="//twitter.com/{{ . }}" target="_blank" rel="noopener"></a>{{ end }}
+            {{ with .Site.Author.github }}<a class="author-sns-icon icon-github-alt" href="//github.com/{{ . }}" target="_blank" rel="noopener"></a>{{ end }}
+            <a class="author-sns-icon icon-feed" href="/index.xml" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+        {{ with .Site.Author.biography }}<div class="author-biography">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+  </div>
+
+</header>
