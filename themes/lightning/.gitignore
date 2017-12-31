@@ -10,3 +10,4 @@ node_modules
 !/static/service-worker.js
 
 /layouts/partials/*-injections.html
+/layouts/partials/*.css

@@ -33,6 +33,13 @@ nav {
   background-size: cover;
   background-position: center;
 }
+.nav-link-thumbnail.no-image {
+  background-color: #f8f8f8;
+  color: #ddd;
+  font-size: 0.8rem;
+  line-height: 6rem;
+  text-align: center;
+}
 @media screen and (min-width: 600px) {
   .nav-link-thumbnail {
     display: block;

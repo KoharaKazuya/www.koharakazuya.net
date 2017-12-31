@@ -1,7 +1,7 @@
 +++
 date = "2013-11-05T00:00:00+09:00"
 title = "Alfred 用の Todo.txt 連携ワークフローを作った"
-thumbnail = "//www.alfredapp.com/images/logo.png"
+thumbnail = "//www.alfredapp.com/media/logo.png"
 +++
 
 [Alfred](http://www.alfredapp.com/) といえば QuickSilver に並んで Mac で有名なコマンドランチャーアプリ。

@@ -1,5 +1,9 @@
 <a class="nav-link" href="{{ .Permalink }}">
+  {{ if isset .Params "thumbnail" }}
   <div class="nav-link-thumbnail" style="background-image: url('{{ .Params.thumbnail }}');"></div>
+  {{ else }}
+  <div class="nav-link-thumbnail no-image">No Image</div>
+  {{ end }}
   <div class="nav-link-info">
     <div class="nav-link-title">{{ .Title }}</div>
     <div class="nav-link-date">{{ .Date.Format "2006/1/2" }}</div>
