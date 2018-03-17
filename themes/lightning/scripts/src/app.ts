@@ -1,5 +1,3 @@
-import 'core-js/es6/promise';
-
 import DomContentLoaded from './window/DOMContentLoaded';
 import SpeedLinks from './window/SpeedLinks';
 

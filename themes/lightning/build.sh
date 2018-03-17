@@ -28,7 +28,24 @@ cat <<EOS > ./layouts/partials/head-injections.html
   {{ end }}
 
   {{/* JavaScript を非同期でロード */}}
-  <script async src="{{ .Site.BaseURL }}$script"></script>
+  <script>
+    function lightningLoad(src) {
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      document.head.appendChild(s);
+    }
+    function lightningAppLoad() {
+      lightningLoad('{{ .Site.BaseURL }}$script');
+    }
+    requestAnimationFrame(function() {
+      if (window.Promise) {
+        lightningAppLoad();
+      } else {
+        lightningLoad('https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise&callback=lightningAppLoad');
+      }
+    });
+  </script>
 EOS
 
 # css ファイルの読み込み HTML を作成

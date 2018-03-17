@@ -2,9 +2,6 @@
   "name": "hugo-lightning-theme-scripts",
   "version": "1.0.0",
   "author": "KoharaKazuya",
-  "dependencies": {
-    "core-js": "^2.5.3"
-  },
   "devDependencies": {
     "fuse-box": "^2.5.0-beta.1",
     "typescript": "^2.6.2",
