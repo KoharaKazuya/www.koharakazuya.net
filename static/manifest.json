@@ -2,6 +2,7 @@
   "short_name": "Kohara Blog",
   "name": "Kohara's Blog",
   "start_url": "/",
+  "display": "minimal-ui",
   "background_color": "#4EBBE6",
   "theme_color": "#4EBBE6",
   "icons": [
