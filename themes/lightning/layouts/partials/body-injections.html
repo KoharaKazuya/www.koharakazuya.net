@@ -1,9 +1,0 @@
-  {{/* クリティカル CSS 以外のフル CSS を非同期で読み込む */}}
-  <script>
-    requestAnimationFrame(function() {
-      var l = document.createElement('link');
-      l.rel = 'stylesheet';
-      l.href = '{{ .Site.BaseURL }}full.css';
-      document.head.appendChild(l);
-    });
-  </script>

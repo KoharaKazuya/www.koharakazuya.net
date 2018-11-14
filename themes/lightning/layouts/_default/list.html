@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
-  {{ partial "head.html" . }}
-
-  <body>
-
-    {{ partial "header.html" . }}
-
-    <main id="view-main">
-      <ul class="container">
-        {{ range .Data.Pages }}
-        <li>
-          {{ partial "nav-link.html" . }}
-        </li>
-        {{ end }}
-      </ul>
-    </main>
-
-    {{ partial "footer" . }}
-
-    {{ partial "body-injections.html" . }}
-  </body>
-
-</html>
+{{ define "main" }}
+<main id="view-main">
+  <ul class="container">
+    {{ range.Data.Pages }}
+    <li>{{ partial "nav-link.html" . }}</li>
+    {{ end }}
+  </ul>
+</main>
+{{ end }}

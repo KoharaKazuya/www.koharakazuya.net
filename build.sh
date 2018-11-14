@@ -4,7 +4,7 @@ set -eu
 
 cd "$(dirname "$0")"
 
-./themes/lightning/build.sh
+(cd ./themes/lightning; yarn install && yarn build)
 
 rm -rf public/
 hugo --minify

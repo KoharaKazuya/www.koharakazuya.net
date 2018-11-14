@@ -1,13 +1,2 @@
-node_modules
-.fusebox
-
-/styles/manifest.json
-
-/static/**/*.js
-/static/**/*.js.map
-/static/**/*.css
-/static/**/*.css.map
-!/static/service-worker.js
-
-/layouts/partials/*-injections.html
-/layouts/partials/*.css
+/node_modules
+/assets

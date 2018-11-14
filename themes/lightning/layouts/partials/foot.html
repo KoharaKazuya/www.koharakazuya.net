@@ -1,0 +1,20 @@
+{{/* JavaScript を非同期でロード */}}
+{{ with resources.Get "full.js" | fingerprint }}
+<script>
+  function lightningLoad(src) {
+    var s = document.createElement('script');
+    s.src = src;
+    document.head.appendChild(s);
+  }
+  function lightningAppLoad() {
+    lightningLoad('{{ .Permalink }}');
+  }
+  requestAnimationFrame(function() {
+    if (window.Promise) {
+      lightningAppLoad();
+    } else {
+      lightningLoad('https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise&callback=lightningAppLoad');
+    }
+  });
+</script>
+{{ end }}
