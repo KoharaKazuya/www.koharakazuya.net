@@ -7,4 +7,4 @@ cd "$(dirname "$0")"
 ./themes/lightning/build.sh
 
 rm -rf public/
-hugo
+hugo --minify
