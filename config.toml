@@ -1,6 +1,7 @@
 baseurl         = "https://www.koharakazuya.net/"
 theme           = "lightning"
 hasCJKLanguage  = true
+defaultContentLanguage = "ja"
 languageCode    = "ja-jp"
 title           = "Kohara's Blog"
 googleAnalytics = "UA-49903910-2"
