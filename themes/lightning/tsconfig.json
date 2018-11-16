@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
+    "target": "es2016",
     "moduleResolution": "node",
     "lib": ["dom", "es5", "es2015.promise"],
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true
   }
 }

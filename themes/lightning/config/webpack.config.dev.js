@@ -1,8 +1,10 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
+
+  context: path.resolve(__dirname, ".."),
 
   entry: {
     "list.critical": "./src/list.critical.ts",
@@ -11,14 +13,24 @@ module.exports = {
   },
 
   output: {
-    path: __dirname + "/assets"
+    path: path.resolve(__dirname, "../assets")
   },
 
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: "ts-loader",
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              compilerOptions: {
+                target: "es2016",
+                sourceMap: true
+              }
+            }
+          }
+        ],
         exclude: /node_modules/
       },
       {
@@ -48,5 +60,7 @@ module.exports = {
     extensions: [".ts", ".js"]
   },
 
-  plugins: [new CleanWebpackPlugin(["assets"]), new MiniCssExtractPlugin()]
+  plugins: [new MiniCssExtractPlugin()],
+
+  devtool: "eval-source-map"
 };
