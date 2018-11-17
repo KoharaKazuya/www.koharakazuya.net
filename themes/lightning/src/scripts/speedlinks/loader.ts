@@ -1,5 +1,6 @@
 import { Content } from "./content";
 import { parseContent } from "./parser";
+import { get } from "../lib/xhr";
 
 type HTMLText = string;
 
@@ -21,7 +22,7 @@ export async function loadContent(href: string): Promise<Content> {
  * 指定した URL の Content を取得 (ネットワーク的に解決) する
  */
 async function fetchContent(href: string): Promise<HTMLText> {
-  const response = await fetch(href);
+  const response = await (window.fetch || get)(href);
   const responseText = await response.text();
   if (response.status !== 200) {
     throw new Error(

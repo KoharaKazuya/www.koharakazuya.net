@@ -3,7 +3,6 @@ import { loadContent } from "./loader";
 import { addAnchorHook } from "./anchorhook";
 import { notNull } from "../lib/notNull";
 import { dispatchPagechangeEvent } from "../event/dispatcher";
-import { loadScrollPosition } from "./scrollstore";
 
 /** アンカーリンクに設定された JavaScript でのフックを削除する関数一覧 */
 let hookRemovers: Array<() => void> = [];

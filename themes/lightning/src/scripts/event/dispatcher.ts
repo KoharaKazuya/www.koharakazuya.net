@@ -1,6 +1,15 @@
 import { eventPagechange } from "./types";
 
 export function dispatchPagechangeEvent(): void {
-  const event = new Event(eventPagechange);
+  let event: CustomEvent<{}>;
+
+  try {
+    event = new CustomEvent(eventPagechange, {});
+  } catch (e) {
+    // fallback for IE
+    event = document.createEvent("CustomEvent");
+    event.initCustomEvent(eventPagechange, false, false, {});
+  }
+
   window.dispatchEvent(event);
 }

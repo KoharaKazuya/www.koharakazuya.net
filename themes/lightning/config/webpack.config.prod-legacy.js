@@ -17,19 +17,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(js|ts)$/,
         use: [
           {
             loader: "ts-loader",
             options: {
               compilerOptions: {
                 target: "es5",
-                module: "es2015"
+                allowJs: true
               }
             }
           }
-        ],
-        exclude: /node_modules/
+        ]
       },
       {
         test: /\.css$/,
