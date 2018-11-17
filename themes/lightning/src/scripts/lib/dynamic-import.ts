@@ -1,9 +1,9 @@
-export function importScript(src: string, integrity: string): Promise<void> {
+export function importScript(src: string, integrity?: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const script = document.createElement("script");
     script.type = "text/javascript";
     script.src = src;
-    script.integrity = integrity;
+    if (integrity) script.integrity = integrity;
     script.crossOrigin = "anonymous";
     script.onload = () => resolve();
     script.onerror = reject;
@@ -11,12 +11,12 @@ export function importScript(src: string, integrity: string): Promise<void> {
   });
 }
 
-export function importStyle(src: string, integrity: string): Promise<void> {
+export function importStyle(src: string, integrity?: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = src;
-    link.integrity = integrity;
+    if (integrity) link.integrity = integrity;
     link.crossOrigin = "anonymous";
     link.onload = () => resolve();
     link.onerror = reject;

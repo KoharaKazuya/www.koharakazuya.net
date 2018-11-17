@@ -12,6 +12,25 @@ export async function codeHighlight(): Promise<void> {
       importScript(
         "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js",
         "sha384-BlPof9RtjBqeJFskKv3sK3dh4Wk70iKlpIe92FeVN+6qxaGUOUu+mZNpALZ+K7ya"
+      ).then(() =>
+        Promise.all([
+          importScript(
+            "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/go.min.js",
+            "sha256-LVuWfOU0rWFMCJNl1xb3K2HSWfxtK4IPbqEerP1P83M="
+          ),
+          importScript(
+            "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/rust.min.js",
+            "sha256-8lS5Qc8uYpAmF/KS5Tbem9ogZo4+/z+JWMgk2rwmRyE="
+          ),
+          importScript(
+            "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/scss.min.js",
+            "sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+          ),
+          importScript(
+            "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/yaml.min.js",
+            "sha256-GuL67zsJWO0bMHHaASSslF37TSgnQF5fuL2n80/HpoU="
+          )
+        ])
       ),
       importStyle(
         "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css",
