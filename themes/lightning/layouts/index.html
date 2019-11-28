@@ -1,0 +1,9 @@
+{{ define "main" }}
+<main id="view-main">
+  <ul class="container">
+    {{ range .Site.RegularPages }}
+    <li>{{ partial "nav-link.html" . }}</li>
+    {{ end }}
+  </ul>
+</main>
+{{ end }}
