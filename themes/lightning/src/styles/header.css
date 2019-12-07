@@ -17,7 +17,7 @@ header {
 }
 
 .site-description {
-  font-size: 0.4rem;
+  font-size: 0.8rem;
 }
 
 .author {
@@ -29,6 +29,7 @@ header {
 .author-card {
   display: flex;
   align-items: center;
+  color: #999;
 }
 
 .author-icon {
@@ -46,30 +47,29 @@ header {
 
 .author-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 1rem;
 }
 
-.author-name,
-.author-biography {
-  height: 3rem;
-  color: #888;
-  font-size: 0.4rem;
-  line-height: 1.5;
+.author-name {
+  line-height: 1rem;
+  font-weight: bold;
 }
 
-.author-name {
-  height: 1rem;
-  font-weight: bold;
+.author-biography {
+  font-size: 0.8rem;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  overflow: hidden;
 }
 
 .author-sns {
   display: flex;
-  margin-left: 1rem;
 }
 
 .author-sns-icon {
-  color: #888;
   text-decoration: none;
   margin-left: 0.4rem;
 }
@@ -82,9 +82,7 @@ header {
     margin-bottom: 3rem;
   }
 
-  .author-name,
-  .author-biography,
-  .author-sns-icon {
+  .author-card {
     color: #fff;
   }
 }
