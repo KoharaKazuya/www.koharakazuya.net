@@ -2,7 +2,7 @@
   {{ if isset .Params "thumbnail" }}
   <div class="nav-link-thumbnail" style="background-image: url('{{ .Params.thumbnail }}');"></div>
   {{ else }}
-  <div class="nav-link-thumbnail no-image">No Image</div>
+  <div class="nav-link-thumbnail no-image" role="img" aria-label="No thumbnail">No Image</div>
   {{ end }}
   <div class="nav-link-info">
     <div class="nav-link-title">
