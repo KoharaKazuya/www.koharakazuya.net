@@ -2,7 +2,6 @@
 date = "2019-10-27T22:52:00+09:00"
 title = "Rust で CLI と Web のロジックが共通のツールを作った"
 thumbnail = "/images/2019-10-27-json-ellipsis.png"
-draft = true
 +++
 
 ## tl;dr

@@ -21,9 +21,11 @@ header {
 }
 
 .author {
+  display: block;
   padding: 1rem;
   padding-right: calc(1rem + env(safe-area-inset-right));
   max-width: 600px;
+  text-decoration: none;
 }
 
 .author-card {
@@ -70,7 +72,6 @@ header {
 }
 
 .author-sns-icon {
-  text-decoration: none;
   margin-left: 0.4rem;
 }
 
