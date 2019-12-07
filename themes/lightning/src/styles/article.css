@@ -8,7 +8,7 @@ article h1 {
 article .meta {
   display: block;
   text-align: center;
-  color: #888;
+  color: #666;
   font-size: 0.8rem;
   margin-bottom: 3rem;
   line-height: 2.1rem;
@@ -35,10 +35,10 @@ article p {
 }
 
 article a {
-  color: #419cc0;
+  color: #0075a9;
 }
 article a:hover {
-  color: #4ebbe6;
+  color: #00a1e6;
 }
 
 article img {

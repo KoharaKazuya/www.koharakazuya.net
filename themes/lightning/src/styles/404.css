@@ -4,13 +4,13 @@
   margin: auto;
   padding: 6rem 0 8rem;
   text-align: center;
-  color: #999;
+  color: #666;
 }
 
 .error-404 a {
   padding: 1rem;
-  color: #419cc0;
+  color: #0075a9;
 }
 .error-404 a:hover {
-  color: #4ebbe6;
+  color: #00a1e6;
 }

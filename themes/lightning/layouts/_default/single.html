@@ -5,12 +5,9 @@
     <aside class="meta">{{ .Date.Format "2006/1/2" }}</aside>
     {{ .Content }}
     <aside>
-      <ul class="social-links">
-        <li><a class="social-link" data-social-link="twitter" href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener">Twitter で記事を共有する</a></li>
-        <li><a class="social-link" data-social-link="facebook" href="https://www.facebook.com/dialog/share?href={{ .Permalink }}" target="_blank" rel="noopener">Facebook で記事を共有する</a></li>
-        <li><a class="social-link" data-social-link="line" href="https://social-plugins.line.me/lineit/share?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener">LINE で記事を共有する</a></li>
-        <li><a class="social-link" data-social-link="bhatena" href="https://b.hatena.ne.jp/entry/{{ .Permalink }}" target="_blank" rel="noopener">はてなブックマーク で記事を共有する</a></li>
-      </ul>
+      <div class="share">
+        <button type="button" class="share-button">この記事をシェアする</button>
+      </div>
     </aside>
   </article>
 </main>

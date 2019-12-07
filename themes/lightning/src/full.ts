@@ -7,6 +7,6 @@ import "./styles/footer.css";
 import "./styles/icomoon.css";
 import "./styles/404.css";
 import "./styles/transition.css";
-import "./styles/social-link.css";
+import "./styles/share.css";
 
 import "./scripts/entrypoint";

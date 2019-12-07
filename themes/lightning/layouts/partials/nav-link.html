@@ -2,12 +2,16 @@
   {{ if isset .Params "thumbnail" }}
   <div class="nav-link-thumbnail" style="background-image: url('{{ .Params.thumbnail }}');"></div>
   {{ else }}
-  <div class="nav-link-thumbnail no-image">No Image</div>
+  <div class="nav-link-thumbnail no-image" role="img" aria-label="No thumbnail">No Image</div>
   {{ end }}
   <div class="nav-link-info">
-    <div class="nav-link-title">{{ .Title }}</div>
-    <div class="nav-link-date">{{ .Date.Format "2006/1/2" }}</div>
-    <div class="nav-link-summary">{{ .Summary }}</div>
-    <div class="nav-link-prompt">続きを読む</div>
+    <div class="nav-link-title">
+      {{ .Title }}
+      <span class="nav-link-date">{{ .Date.Format "2006/1/2" }}</span>
+    </div>
+    <div class="nav-link-summary">
+      {{ .Summary }}
+      <span class="nav-link-prompt">続きを読む</span>
+    </div>
   </div>
 </a>
