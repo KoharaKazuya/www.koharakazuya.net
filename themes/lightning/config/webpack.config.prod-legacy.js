@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -42,8 +42,8 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(["assets/*.legacy.*"], {
-      root: path.resolve(__dirname, "..")
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ["**/*.legacy.*"]
     })
   ]
 };

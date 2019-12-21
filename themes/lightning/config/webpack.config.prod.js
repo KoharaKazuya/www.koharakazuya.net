@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
@@ -61,7 +61,9 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(["assets"], { root: path.resolve(__dirname, "..") }),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ["**/*", "!**/*.legacy.*"]
+    }),
     new MiniCssExtractPlugin()
   ]
 };
