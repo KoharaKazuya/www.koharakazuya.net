@@ -24,6 +24,7 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
+              transpileOnly: true,
               compilerOptions: {
                 target: "es2016",
                 sourceMap: true
