@@ -26,8 +26,7 @@ module.exports = {
             options: {
               transpileOnly: true,
               compilerOptions: {
-                target: "es2016",
-                sourceMap: true
+                target: "es2016"
               }
             }
           }
@@ -43,6 +42,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
+              sourceMap: true,
               importLoaders: 1
             }
           },

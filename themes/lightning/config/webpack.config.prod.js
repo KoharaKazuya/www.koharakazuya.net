@@ -43,6 +43,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
+              sourceMap: true,
               importLoaders: 1
             }
           },
@@ -66,5 +67,7 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ["**/*", "!**/*.legacy.*"]
     }),
     new MiniCssExtractPlugin()
-  ]
+  ],
+
+  devtool: "source-map"
 };

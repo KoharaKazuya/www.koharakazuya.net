@@ -50,5 +50,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       Promise: "core-js-pure/features/es6-promise"
     })
-  ]
+  ],
+
+  devtool: "source-map"
 };
