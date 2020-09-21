@@ -1,8 +1,8 @@
-+++
-date = "2019-12-07T14:30:00+09:00"
-title = "About Me"
-thumbnail = "https://www.koharakazuya.net/icon.png"
-+++
+---
+date: "2019-12-07T14:30:00+09:00"
+thumbnail: https://www.koharakazuya.net/icon.png
+title: About Me
+---
 
 ![プロフィール画像](https://www.koharakazuya.net/icon.png)
 
