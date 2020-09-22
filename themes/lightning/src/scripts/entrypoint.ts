@@ -1,4 +1,5 @@
 import { contentLoaded } from "document-promises";
+import { listen as startQuicklink } from "quicklink";
 import { codeHighlight } from "./codehighlight/codehighlight";
 import { headerAnchors } from "./headeranchors/headeranchors";
 import { gaTrackErrors } from "./lib/google-analytics";
@@ -12,6 +13,9 @@ if ("serviceWorker" in navigator) {
 }
 
 contentLoaded.then(() => {
+  // リンクの先読み
+  startQuicklink();
+
   // ヘッダーのリンク化
   headerAnchors();
 
