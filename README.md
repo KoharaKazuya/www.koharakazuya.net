@@ -16,5 +16,5 @@ $ ./deploy.sh
 **Server**
 
 ```console
-$ hugo serve --buildDrafts --buildFuture
+$ hugo server -DF
 ```
