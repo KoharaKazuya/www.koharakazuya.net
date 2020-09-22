@@ -7,11 +7,11 @@ module.exports = {
   context: path.resolve(__dirname, ".."),
 
   entry: {
-    "full.legacy": "./src/full.ts"
+    "full.legacy": "./src/full.ts",
   },
 
   output: {
-    path: path.resolve(__dirname, "../assets")
+    path: path.resolve(__dirname, "../assets"),
   },
 
   module: {
@@ -24,26 +24,26 @@ module.exports = {
             options: {
               compilerOptions: {
                 target: "es5",
-                allowJs: true
-              }
-            }
-          }
-        ]
+                allowJs: true,
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: "null-loader"
-      }
-    ]
+        use: "null-loader",
+      },
+    ],
   },
 
   resolve: {
-    extensions: [".ts", ".js"]
+    extensions: [".ts", ".js"],
   },
 
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ["**/*.legacy.*"]
-    })
-  ]
+      cleanOnceBeforeBuildPatterns: ["**/*.legacy.*"],
+    }),
+  ],
 };
