@@ -16,3 +16,8 @@ disableHugoGeneratorInject = true
 
 [params]
   description   = "作ったものや気付いたことを書き連ねる技術ブログ"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe    = true
