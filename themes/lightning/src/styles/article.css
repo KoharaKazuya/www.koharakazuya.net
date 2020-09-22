@@ -14,6 +14,12 @@ article .meta {
   line-height: 2.1rem;
 }
 
+article .tag {
+  display: inline-block;
+  color: #666;
+  line-height: 1.2rem;
+}
+
 article h2,
 article h3,
 article h4,

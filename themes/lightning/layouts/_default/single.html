@@ -2,7 +2,16 @@
 <main class="container" id="view-main">
   <article>
     <h1>{{ .Title }}</h1>
-    <aside class="meta">{{ .Date.Format "2006/1/2" }}</aside>
+    <aside class="meta">
+      <div>{{ .Date.Format "2006/1/2" }}</div>
+      {{ with .Params.tags }}
+      <div>
+        {{ range . }}
+        <a class="tag" href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </aside>
     {{ .Content }}
     <aside>
       <div class="share"></div>
