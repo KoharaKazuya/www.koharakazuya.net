@@ -10,11 +10,11 @@ module.exports = {
   entry: {
     "list.critical": "./src/list.critical.ts",
     "single.critical": "./src/single.critical.ts",
-    full: "./src/full.ts"
+    full: "./src/full.ts",
   },
 
   output: {
-    path: path.resolve(__dirname, "../assets")
+    path: path.resolve(__dirname, "../assets"),
   },
 
   module: {
@@ -26,44 +26,47 @@ module.exports = {
             loader: "ts-loader",
             options: {
               compilerOptions: {
-                target: "es2016"
-              }
-            }
-          }
+                target: "es2016",
+              },
+            },
+          },
         ],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1
-            }
+              url: false,
+              importLoaders: 1,
+            },
           },
           {
             loader: "postcss-loader",
             options: {
-              plugins: [require("autoprefixer")({ grid: true })]
-            }
-          }
-        ]
-      }
-    ]
+              postcssOptions: {
+                plugins: [require("autoprefixer")({ grid: true })],
+              },
+            },
+          },
+        ],
+      },
+    ],
   },
 
   resolve: {
-    extensions: [".ts", ".js"]
+    extensions: [".ts", ".js"],
   },
 
   plugins: [
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ["**/*", "!**/*.legacy.*"]
+      cleanOnceBeforeBuildPatterns: ["**/*", "!**/*.legacy.*"],
     }),
-    new MiniCssExtractPlugin()
-  ]
+    new MiniCssExtractPlugin(),
+  ],
 };

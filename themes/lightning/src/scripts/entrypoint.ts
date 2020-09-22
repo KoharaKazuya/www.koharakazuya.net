@@ -1,9 +1,8 @@
 import { contentLoaded } from "document-promises";
-import { speedlinks } from "./speedlinks/speedlinks";
+import { listen as startQuicklink } from "quicklink";
 import { codeHighlight } from "./codehighlight/codehighlight";
-import { eventPagechange } from "./event/types";
-import { gaTrackPagePath, gaTrackErrors } from "./lib/google-analytics";
 import { headerAnchors } from "./headeranchors/headeranchors";
+import { gaTrackErrors } from "./lib/google-analytics";
 import { share } from "./share/share";
 
 // エラー情報収集
@@ -14,21 +13,15 @@ if ("serviceWorker" in navigator) {
 }
 
 contentLoaded.then(() => {
-  // 疑似 SPA 化
-  speedlinks();
+  // リンクの先読み
+  startQuicklink();
 
   // ヘッダーのリンク化
-  window.addEventListener(eventPagechange, headerAnchors);
   headerAnchors();
 
   // コードハイライト
-  window.addEventListener(eventPagechange, codeHighlight);
   codeHighlight();
 
   // 記事をシェアするボタン
-  window.addEventListener(eventPagechange, share);
   share();
-
-  // Google Analytics
-  window.addEventListener(eventPagechange, () => gaTrackPagePath());
 });

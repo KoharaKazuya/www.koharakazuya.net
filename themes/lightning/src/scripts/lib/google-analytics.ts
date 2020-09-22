@@ -1,17 +1,8 @@
-/**
- * @see https://developers.google.com/analytics/devguides/collection/gtagjs/single-page-applications
- */
-export function gaTrackPagePath(path: string = location.pathname): void {
-  if (typeof gtagConfig === "function") {
-    gtagConfig({ page_path: path });
-  }
-}
-
 export function gaSocialOpenShare(service: string): void {
   if (typeof gtag === "function") {
     gtag("event", "share_start", {
       event_category: "social",
-      event_label: service
+      event_label: service,
     });
   }
 }

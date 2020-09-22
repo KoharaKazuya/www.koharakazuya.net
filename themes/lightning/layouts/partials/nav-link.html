@@ -1,6 +1,6 @@
 <a class="nav-link" href="{{ .Permalink }}">
   {{ if isset .Params "thumbnail" }}
-  <div class="nav-link-thumbnail" style="background-image: url('{{ .Params.thumbnail }}');"></div>
+  <div class="nav-link-thumbnail" style="background-image: url('{{ if or (hasPrefix .Params.thumbnail "http") (hasPrefix .Params.thumbnail "/") }}{{ .Params.thumbnail }}{{ else }}{{ .Permalink }}{{ .Params.thumbnail }}{{ end }}');"></div>
   {{ else }}
   <div class="nav-link-thumbnail no-image" role="img" aria-label="No thumbnail">No Image</div>
   {{ end }}
