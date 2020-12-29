@@ -12,7 +12,7 @@ green="$(tput setaf 2 2>/dev/null || : )"
 echo ''
 echo "$white$rev INFO $reset Build theme"
 echo ''
-(cd ./themes/lightning; yarn install && yarn build)
+(cd ./themes/lightning; npm install && npm run build)
 
 echo ''
 echo "$white$rev INFO $reset Build content"
