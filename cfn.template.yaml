@@ -59,15 +59,6 @@ Conditions:
 
 # スタック作成時に生成するリソース
 Resources:
-  # CloudFront のオリジンアクセスアイデンティティ
-  #
-  # CloudFront が S3 バケットに認証してもらうために必要となる
-  CloudFrontOriginAccessIdentity:
-    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
-    Properties:
-      CloudFrontOriginAccessIdentityConfig:
-        Comment: !Sub ${AWS::StackName}
-
   # S3 バケット (アプリケーションデータ)
   #
   # アプリケーションファイルの置き場所となる
@@ -75,7 +66,9 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref DomainName
-      AccessControl: Private
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: 404.html
 
   # S3 バケットポリシー (アプリケーションデータ)
   #
@@ -86,16 +79,14 @@ Resources:
       Bucket: !Ref S3BucketStaticSite
       PolicyDocument:
         Statement:
-          # CloudFront からの読み込みを許可する
+          # 静的ウェブサイトホスティングのため、すべてのオブジェクトのパブリックアクセスを許可する
+          # @see https://docs.aws.amazon.com/ja_jp/AmazonS3/latest/userguide/WebsiteAccessPermissionsReqd.html
           - Effect: Allow
-            Principal:
-              CanonicalUser: !GetAtt CloudFrontOriginAccessIdentity.S3CanonicalUserId
+            Principal: "*"
             Action:
-              - s3:ListBucket
               - s3:GetObject
             Resource:
-              - !Sub ${S3BucketStaticSite.Arn}
-              - !Sub ${S3BucketStaticSite.Arn}/*
+              - !Sub arn:aws:s3:::${DomainName}/*
 
   # CloudFront
   #
@@ -106,10 +97,10 @@ Resources:
       DistributionConfig:
         # S3 バケット (アプリケーションデータ) をオリジンサーバーとする
         Origins:
-          - DomainName: !GetAtt S3BucketStaticSite.RegionalDomainName
+          - DomainName: !Sub "www.koharakazuya.net.s3-website-${AWS::Region}.amazonaws.com"
             Id: S3BucketStaticSite
-            S3OriginConfig:
-              OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${CloudFrontOriginAccessIdentity}
+            CustomOriginConfig:
+              OriginProtocolPolicy: http-only
         Enabled: true
         Comment: !Sub ${AWS::StackName}
         DefaultRootObject: index.html
