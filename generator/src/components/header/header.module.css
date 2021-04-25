@@ -1,0 +1,13 @@
+.header {
+  display: block;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background: #0075a9;
+    margin-bottom: 3rem;
+  }
+}

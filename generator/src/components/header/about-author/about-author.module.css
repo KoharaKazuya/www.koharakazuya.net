@@ -1,0 +1,52 @@
+.link {
+  display: block;
+  padding: 1rem;
+  padding-right: calc(1rem + env(safe-area-inset-right));
+  max-width: 600px;
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  margin-right: 1rem;
+
+  background-color: #0075a9;
+  background-image: url("/author.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+}
+
+.name {
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.biography {
+  font-size: 0.8rem;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    color: #fff;
+  }
+}

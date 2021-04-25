@@ -1,3 +1,0 @@
-# Hugo Lightning
-
-Hugo theme.

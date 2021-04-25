@@ -63,7 +63,7 @@ Native File System API が使えない環境でも代替手段を提供してく
 
 Zip Web に組み込んで実際に使ってみたのだが、Zip に含めるファイルを読み込んでいる最中にエラーが発生して、その原因もわからず行き詰まってしまった。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Native File System API を使ってディレクトリ以下の File (Blob) を読もうとしたとき、&quot;DOMException: A requested file or directory could not be found at the time an operation was processed.&quot; ってエラーになる。再現方法がよくわからない。</p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1307852501824147456?ref_src=twsrc%5Etfw">September 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1307852501824147456
 
 原因を探っているうちに、よくよく考えてみると Native File System API は別にこのサービスでは不要だったな、ということに気付いた。
 Zip を作るというユースケースでは従来のアップロード＆ダウンロードという体験で十分だった。

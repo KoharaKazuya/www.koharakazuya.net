@@ -22,7 +22,7 @@ tags:
 
 [Diff PDF][diff-pdf] を使うと 2 つの PDF ファイルの違う部分が手軽にわかります。これを使って差がある部分を漏れなくチェックできるようにしましょう！
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gGlHdh26FYk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=gGlHdh26FYk
 
 ## これまでの改善の流れ
 

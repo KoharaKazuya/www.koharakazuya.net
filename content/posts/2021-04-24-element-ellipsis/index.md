@@ -9,7 +9,7 @@ tags:
 
 この動画のような動作を実現するための方法を考えたという話です。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jY0zEMXyLXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=jY0zEMXyLXs
 
 CSS では `text-overflow: ellipsis` というテキストが表示エリアから溢れたときに省略記号 (`…`) によって省略表示できます。
 これはテキストに対する指定のため、一般の HTML 要素に対しては機能しません。
@@ -26,10 +26,7 @@ CSS では `text-overflow: ellipsis` というテキストが表示エリアか�
 
 詳細は CodePen で確認できます。
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="要素版 text-overflow: ellipsis" src="https://codepen.io/koharakazuya/embed/poRGzYg?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/koharakazuya/pen/poRGzYg'>要素版 text-overflow: ellipsis</a> by KoharaKazuya
-  (<a href='https://codepen.io/koharakazuya'>@koharakazuya</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+https://codepen.io/koharakazuya/pen/poRGzYg
 
 `resize` イベントで直接関係のない window のサイズを監視し、意味的にも負荷的にも適切ではない気がしているのでできれば改良したいですが、私が思い付けたのは上記の実装だけでした。
 もっとスマートなやり方があれば教えていただけると助かります。

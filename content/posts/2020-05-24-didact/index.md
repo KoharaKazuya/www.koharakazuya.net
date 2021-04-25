@@ -11,7 +11,7 @@ React のソースコードが読めるようになりたく、[Build your own R
 
 ## 経緯
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">React.lazy ってこういう実装と同じ？ React 側で実装されているのは何か特別なことをやっているから？ ということを調べてるんだけどよくわからない。<br>Created with <a href="https://twitter.com/carbon_app?ref_src=twsrc%5Etfw">@carbon_app</a> <a href="https://t.co/3hfl00wRWO">pic.twitter.com/3hfl00wRWO</a></p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1262016799731666944?ref_src=twsrc%5Etfw">May 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1262016799731666944
 
 React をよく使っていて実装方法に興味が出て「ソースコードを読んでみたいな」と思う瞬間がある。その度に「ちょっと読んでみよう」と覗きにいくが、難しくて読めない (= 理解できない)。
 

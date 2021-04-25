@@ -2,24 +2,14 @@
 
 set -eu
 
-cd "$(dirname "$0")"
+cd $(dirname "$0")
 
-reset="$(tput sgr0    2>/dev/null || : )"
-rev="$(  tput rev     2>/dev/null || : )"
-white="$(tput setaf 7 2>/dev/null || : )"
-green="$(tput setaf 2 2>/dev/null || : )"
+if [ "${1:-}" = "--force" ] || [ ! -d ./frontend/dist ]; then
+  ( cd ./frontend; npm ci; npm run build )
+fi
 
-echo ''
-echo "$white$rev INFO $reset Build theme"
-echo ''
-(cd ./themes/lightning; npm install && npm run build)
+if [ "${1:-}" = "--force" ] || [ ! -d ./generator/build ]; then
+  ( cd ./generator; npm ci; npm run build )
+fi
 
-echo ''
-echo "$white$rev INFO $reset Build content"
-echo ''
-rm -rf public/
-hugo --minify
-
-echo ''
-echo "$green$rev  OK  $reset$green Done!"
-echo ''
+./generator/cli.js

@@ -1,0 +1,83 @@
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 4rem 0 2rem;
+}
+
+.content h1 > a:first-child,
+.content h2 > a:first-child,
+.content h3 > a:first-child,
+.content h4 > a:first-child,
+.content h5 > a:first-child,
+.content h6 > a:first-child {
+  display: inline-block;
+  width: 1em;
+  margin: auto 0.5em auto -1.5em;
+  scroll-margin-top: 2rem;
+  text-decoration: none;
+  opacity: 0;
+}
+.content h1:hover > a:first-child,
+.content h2:hover > a:first-child,
+.content h3:hover > a:first-child,
+.content h4:hover > a:first-child,
+.content h5:hover > a:first-child,
+.content h6:hover > a:first-child {
+  opacity: 1;
+}
+
+.content h1,
+.content h2 {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.content p {
+  margin: 2rem 0;
+}
+
+.content a {
+  color: #0075a9;
+}
+.content a:hover {
+  color: #00a1e6;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+}
+
+.content ul,
+.content ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.content ul {
+  list-style: disc;
+}
+
+.content ol {
+  list-style: decimal;
+}
+
+.content li {
+  margin: 1rem;
+}
+
+.content code {
+  padding: 0.25em;
+  color: #000;
+  background-color: #f8f8f8;
+  font-family: "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+}

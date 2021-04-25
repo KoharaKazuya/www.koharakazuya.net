@@ -1,0 +1,5 @@
+.container {
+  margin: 5rem auto 1rem;
+  height: calc(3rem + 2px);
+  text-align: center;
+}

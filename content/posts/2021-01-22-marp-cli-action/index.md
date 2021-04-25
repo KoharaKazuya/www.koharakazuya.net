@@ -38,9 +38,9 @@ Markdown 記法からスライドを生成する、というのが中心にあ�
 
 この手順で公開したスライドの例が以下です。
 
-<script async class="speakerdeck-embed" data-id="2f4de29f647b4b84867933ab37e43184" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+http://speakerdeck.com/player/2f4de29f647b4b84867933ab37e43184
 
-<script async class="speakerdeck-embed" data-id="ac90bbe61a4541af8f7068c4081b502d" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+http://speakerdeck.com/player/ac90bbe61a4541af8f7068c4081b502d
 
 ## 改善したいポイント
 

@@ -8,7 +8,7 @@ tags:
 
 そこそこ前から [Factorio](https://factorio.com/) というゲームにハマっている。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DR01YdFtWFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=DR01YdFtWFI
 
 このゲームの追加コンテンツを作り、公開した。
 
@@ -54,11 +54,11 @@ Lua は速いらしいが、スクリプト言語側で 60 fps で呼び出さ�
 
 VS Code でデバッグ環境を整えると楽。[これ](https://marketplace.visualstudio.com/items?itemName=justarandomgeek.factoriomod-debug) 作った人凄い。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">VSCode で Factorio Modding が開発できる。すんごい。<br>ブレークポイントでちゃんとゲームが停止する。<br>詳しくは fff-337 <a href="https://twitter.com/hashtag/factorio?src=hash&amp;ref_src=twsrc%5Etfw">#factorio</a> <a href="https://t.co/9jDMuqxJXK">pic.twitter.com/9jDMuqxJXK</a></p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1270676088503451648?ref_src=twsrc%5Etfw">June 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1270676088503451648
 
 ゲーム内のデバッグメニュー (F5) とか Prototype Explorer (Ctrl+Shift+E) とか活用すると便利。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">公式にもこういうデバッグ用ツールが組み込まれてて快適。<br>詳しくは fff-349 <a href="https://twitter.com/hashtag/factorio?src=hash&amp;ref_src=twsrc%5Etfw">#factorio</a> <a href="https://t.co/OdjfRtvzuk">pic.twitter.com/OdjfRtvzuk</a></p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1270676801325391873?ref_src=twsrc%5Etfw">June 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1270676801325391873
 
 英語を書くのがちょっと億劫だった。通じてるんだか通じてないんだかわからない。
 でも流石に MOD Portal で公開するなら英語にしておかなきゃな、と思って書いた。

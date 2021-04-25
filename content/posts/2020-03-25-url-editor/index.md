@@ -49,15 +49,15 @@ IME での変換中 (特に Android だと英字の入力でも予測変換の�
 
 ### Preact CLI prerender 機能の罠
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Preact が Cypress 環境で属性の適用だけできなくなる。&lt;div&gt;text&lt;/div&gt; みたいな要素とテキストだけの HTML が生成される。なんだこれ</p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1240932037906690048?ref_src=twsrc%5Etfw">March 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1240932037906690048
 
 補足: Preact CLI prerender 機能の影響。Cypress は関係ない。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">hydrate を理解してなかっただけだった。<br>クラサバのレンダリングで不一致が起きたとき、属性以外だけ更新するらしい</p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1240949358310215680?ref_src=twsrc%5Etfw">March 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1240949358310215680
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">読んだ。まさにコレだった。<br><br>“The Perils of Rehydration”, a tutorial from Josh Comeau. <a href="https://t.co/YOSbg9itsH">https://t.co/YOSbg9itsH</a> <a href="https://twitter.com/JoshWComeau?ref_src=twsrc%5Etfw">@JoshWComeau</a>より</p>&mdash; 小原　一哉 (@KoharaKazuya) <a href="https://twitter.com/KoharaKazuya/status/1240959240560193538?ref_src=twsrc%5Etfw">March 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/KoharaKazuya/status/1240959240560193538
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;re working on some changes in Preact that will reduce the cases where missing attributes can occur.</p>&mdash; Jason Miller 🦊⚛ (@_developit) <a href="https://twitter.com/_developit/status/1241099280376569858?ref_src=twsrc%5Etfw">March 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+https://twitter.com/_developit/status/1241099280376569858
 
 Jason Miller さん (Preact の作者) からリプもらって、この罠にハマらないように改善予定だ、ということを教えてもらった。
 (私は日本語のツイートしかしてないんだけど、よくエゴサで見つけられるもんなんだなぁ)

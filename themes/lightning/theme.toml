@@ -1,8 +1,0 @@
-name = "Lightning"
-license = "MIT"
-licenselink = "https://github.com/KoharaKazuya/www.koharakazuya.net/blob/master/themes/lightning/LICENSE.md"
-min_version = "0.41"
-
-[author]
-  name = "KoharaKazuya"
-  homepage = "https://www.koharakazuya.net/"

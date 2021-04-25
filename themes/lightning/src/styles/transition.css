@@ -1,9 +1,0 @@
-main,
-nav {
-  transition: opacity 0.2s ease-out;
-  opacity: 1;
-}
-
-.swapping {
-  opacity: 0.2;
-}

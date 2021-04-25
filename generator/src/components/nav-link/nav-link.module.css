@@ -1,0 +1,62 @@
+.link {
+  display: flex;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+.info {
+  flex: 1 1 auto;
+}
+
+.thumbnail {
+  flex: 0 0 auto;
+  display: none;
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1rem;
+  border: 1px solid #ddd;
+
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+.thumbnail.no-image {
+  background-color: #f8f8f8;
+  color: #ddd;
+  font-size: 0.8rem;
+  line-height: 6rem;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .thumbnail {
+    display: block;
+  }
+}
+
+.date,
+.summary,
+.prompt {
+  color: #666;
+  line-height: 1.5;
+}
+
+.title {
+  color: #333;
+  font-weight: bold;
+  margin-top: -0.3rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-left: 0.5em;
+}
+
+.summary {
+  font-size: 0.8rem;
+}
+
+.prompt {
+  float: right;
+  text-decoration: underline;
+}

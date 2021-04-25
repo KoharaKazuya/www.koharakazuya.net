@@ -1,0 +1,16 @@
+.link {
+  display: block;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  padding-left: calc(1rem + env(safe-area-inset-left));
+  text-decoration: none;
+  background: #0075a9; /* https://ironodata.info/rgb.php?color=0075A9 */
+}
+
+.title {
+  font: inherit;
+}
+
+.description {
+  font-size: 0.8rem;
+}

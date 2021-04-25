@@ -1,0 +1,11 @@
+.header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.item {
+  display: inline-block;
+  margin: 0 0.2em;
+}
