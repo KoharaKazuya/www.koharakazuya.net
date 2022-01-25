@@ -1,8 +1,8 @@
-import isHeading from "hast-util-heading";
-import toText from "hast-util-to-text";
-import h from "hastscript";
+import { heading as isHeading } from "hast-util-heading";
+import { toText } from "hast-util-to-text";
+import { h } from "hastscript";
 import type { Transformer } from "unified";
-import visit from "unist-util-visit";
+import { visit } from "unist-util-visit";
 
 export function headingLinker(): Transformer {
   return (node) => {

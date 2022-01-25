@@ -1,7 +1,7 @@
 // eleventy-high-performance-blog を参考に実装
 // @see https://github.com/google/eleventy-high-performance-blog/blob/eb1f9c11763022719b44ba2715b1e5f60f73baa1/_11ty/blurry-placeholder.js
 
-import DataURIParser from "datauri/parser";
+import DataURIParser from "datauri/parser.js";
 import type { Sharp } from "sharp";
 
 const dataUriParser = new DataURIParser();

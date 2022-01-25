@@ -1,6 +1,8 @@
 import path from "path";
+import url from "url";
 
-export const contentRoot = path.join(__dirname, "../../../content");
-export const staticRoot = path.join(__dirname, "../../../static");
-export const frontendRoot = path.join(__dirname, "../../../frontend/dist");
-export const outputRoot = path.join(__dirname, "../../../public");
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
+export const contentRoot = path.join(dirname, "../../../content");
+export const staticRoot = path.join(dirname, "../../../static");
+export const frontendRoot = path.join(dirname, "../../../frontend/dist");
+export const outputRoot = path.join(dirname, "../../../public");

@@ -1,7 +1,7 @@
 import type { Element } from "hast";
 import type { Transformer } from "unified";
 import type { Parent } from "unist";
-import visit from "unist-util-visit";
+import { visit } from "unist-util-visit";
 
 /**
  * 言語が指定されてないコードブロックも Prism で装飾するために、デフォルトの言語指定を追加する

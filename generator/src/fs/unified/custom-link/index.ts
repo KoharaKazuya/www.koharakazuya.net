@@ -1,6 +1,6 @@
 import { Element } from "hast";
 import { Transformer } from "unified";
-import visit from "unist-util-visit";
+import { visit } from "unist-util-visit";
 import { replaceCodePenLink } from "./codepen";
 import { isCustomLinkParagraph } from "./is-custom-link";
 import { replaceSpeakerDeckLink } from "./speakerdeck";

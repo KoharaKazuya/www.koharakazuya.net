@@ -9,13 +9,12 @@ export default {
   input: "src/index.ts",
   output: {
     dir: "build",
-    format: "cjs",
     preserveModules: true,
     preserveModulesRoot: "src",
     exports: "auto",
   },
 
-  external: [...Object.keys(pkg.dependencies), "preact/jsx-runtime"],
+  external: [...Object.keys(pkg.dependencies), "preact/jsx-runtime", "datauri/parser.js"],
 
   plugins: [
     resolve({

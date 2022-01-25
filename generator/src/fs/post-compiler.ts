@@ -13,7 +13,7 @@ export async function compilePost(id: string): Promise<Post> {
   const { data, content: markdown } = matter(source);
   const meta = unmarshalMeta(data);
 
-  const content = await md2html({ contents: markdown, path: sourcePath });
+  const content = await md2html({ value: markdown, path: sourcePath });
   const summary = await html2summary(content);
 
   return { id, meta, content, summary };

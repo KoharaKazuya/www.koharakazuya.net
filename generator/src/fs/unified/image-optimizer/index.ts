@@ -2,7 +2,7 @@ import type { Element } from "hast";
 import path from "path";
 import sharp from "sharp";
 import { Transformer } from "unified";
-import visit from "unist-util-visit";
+import { visit } from "unist-util-visit";
 import { getPlaceholderDataURI } from "./placeholder";
 
 export function imageOptimizer(): Transformer {

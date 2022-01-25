@@ -2,7 +2,7 @@ import rehypePrisim from "@mapbox/rehype-prism";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remark2rehype from "remark-rehype";
-import unified from "unified";
+import { unified } from "unified";
 import { codeBlockDefaultLanguage } from "./code-block-default-language";
 import { customLink } from "./custom-link";
 import { headingLinker } from "./heading-linker";
@@ -19,7 +19,7 @@ const processer = unified()
   .use(rehypeStringify, { allowDangerousHtml: true });
 
 type Markdown = {
-  contents: string;
+  value: string;
   path: string;
 };
 

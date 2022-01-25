@@ -1,6 +1,8 @@
 import { compareDesc } from "date-fns";
 import { promises as fs } from "fs";
+import { createRequire } from "module";
 import path from "path";
+import url from "url";
 import { ComponentChildren } from "preact";
 import renderToString from "preact-render-to-string";
 import purify from "purify-css";
@@ -90,11 +92,11 @@ export function createTemplate({}: Dependencies): Template {
     const app = renderToString(<App>{children}</App>);
 
     const componentsCss = await fs.readFile(
-      path.join(__dirname, "../index.css"),
+      path.join(path.dirname(url.fileURLToPath(import.meta.url)), "../index.css"),
       { encoding: "utf-8" }
     );
     const prismCss = await fs.readFile(
-      require.resolve("prismjs/themes/prism-coy.css"),
+      createRequire(import.meta.url).resolve("prismjs/themes/prism-coy.css"),
       { encoding: "utf-8" }
     );
     const inlineStyles = purify(app, componentsCss + "\n" + prismCss);

@@ -1,4 +1,4 @@
-import h from "hastscript";
+import { h } from "hastscript";
 import { containerStyle, iframeStyle } from "./styles";
 
 export function replaceYoutubeLink(videoId: string) {

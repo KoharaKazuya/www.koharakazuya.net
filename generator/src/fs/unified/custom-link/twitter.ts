@@ -1,4 +1,4 @@
-import h from "hastscript";
+import { h } from "hastscript";
 
 export function replaceTwitterTweetLink(url: string) {
   return h("div", { style: "margin: 2rem 0;" }, [
